@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube [image] Parser - Alias + Normalizer",
+  "version": "1.0",
+  "description": "Parse [image=...] in YouTube comments, support h:// hs:// and aliases (pcd -> cdn.fourvo.id). Realtime (debounced 500ms).",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["*://www.youtube.com/*"]
+}
